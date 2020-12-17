@@ -1,0 +1,191 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background: #ff9966;
+    /* fallback for old browsers */
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.contenedor {
+    background-color: white;
+    min-height: calc( 100vh - 20px);
+    /* vh es una medida relativa en función del viewport. vh sería viewport height y vw sería viewport width. En este caso le decimos que ocupe el 100% del alto del viewport menos 20px */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+}
+
+i{
+    font-size: 35 px;
+    color: white;
+    margin-right: 10px;
+}
+nav {
+    background-color: #3F51B5;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li:hover {
+    background-color: #1a2770;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+
+/** Menu Sencillo **/
+
+/*pantalla grande*/
+
+@media screen and (min-width:768px) {
+    .sencillo ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+    /* Iconos */
+    .iconos ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .iconos ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .iconos ul li {
+        flex: 0 1 40%;
+    }
+    .sencillo ul{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .iconos ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .iconos ul li {
+        flex: 0 1 100%;
+    }
+}
+
+/*dropdown menu */
+@media screen and (min-width:768px) {
+    .dropdown ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .dropdown ul li {
+        position: relative;
+    }
+    .dropdown ul li ul {
+        display: none;
+    }
+    .dropdown ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+.dropdown ul li ul li:hover {
+    background-color:pink;
+ }
+
+/** Redes Socialaes**/
+
+@media screen and (min-width:768px) {
+    #iconosRS ul  {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    #iconosRS ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+   
+}
+
+/* Social y dropdown*/
+@media screen and (min-width:768px) {
+    #iconosMRS{
+        display: flex;
+       
+    }
+    #iconosMRS :nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } 
+    #iconosMRS ul:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #iconosMRS ul li ul:nth-child(2) {
+        display: none;
+    }
+    #iconosMRS ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px) {
+    #iconosMRS{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    #iconosMRS :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    } 
+    #iconosMRS ul:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    #iconosMRS ul li ul:nth-child(2) {
+        display: none;
+    }
+    #iconosMRS ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
